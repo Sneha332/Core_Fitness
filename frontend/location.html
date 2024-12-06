@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/location.css">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Gym Locations</title>
+
+    <!-- Leaflet.js for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <style>
+        .mid-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        #map {
+            height: 550px;
+            width: 100%;
+            max-width: 800px;
+            border: 5px solid black;
+        }
+
+        .leaflet-routing-container {
+            color: black; /* Set the text color to black */
+            font-family: Arial, sans-serif; /* Optional: Change the font */
+        }
+
+        /* Ensure the routing instruction text is black */
+        .leaflet-routing-instructions {
+            color: black; /* Ensure the text color within the instruction box is black */
+        }
+
+        /* Optional: Change link color */
+        .leaflet-routing-instructions a {
+            color: black; /* Ensure links are also black */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="./index.html" class="logo"><span>CORE</span>Fitness</a>
+    </header>
+
+    <!-- Map Section -->
+    <div>
+        <h1 style="text-align: center;" class="head-about">OUR LOCATIONS</h1>
+        <p class="para-about">Wherever you are in the city, there's a gym waiting for you! Our state-of-the-art fitness centers are designed to offer the best workout experience, equipped with the latest machines, personalized training sessions, and flexible hours to fit your schedule. Become a part of our community today—discover a healthy lifestyle with expert guidance and a supportive environment close to home!</p>
+    </div>
+    
+    <section class="mid-image" id="locations">
+        <div id="map" class="mid-image-about"></div>
+    </section>
+
+    <!-- Leaflet.js and Routing Machine Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script>
+        var map = L.map('map').setView([12.935400, 77.60600], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Fetch locations from the JSON file
+        fetch('location.json')
+            .then(response => response.json())
+            .then(locations => {
+                locations.forEach(location => {
+                    let marker = L.marker([location.Latitude, location.Longitude]).addTo(map)
+                        .bindPopup(`
+                            <strong>${location.Name}</strong><br>
+                            <em>${location.Address}</em>
+                        `)
+                        .on('click', function () {
+                            showRoute(location.Latitude, location.Longitude, location.Name);
+                        });
+                });
+            })
+            .catch(error => console.error('Error fetching locations:', error));
+
+        // Variable to store the user's current location
+        let userMarker, userCircle, routeLine;
+
+        // Get user's location
+        navigator.geolocation.watchPosition(success, error);
+
+        function success(pos) {
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            const accuracy = pos.coords.accuracy;
+
+            // Remove previous user's location marker and circle
+            if (userMarker) {
+                map.removeLayer(userMarker);
+                map.removeLayer(userCircle);
+            }
+
+            // Add user's location marker and accuracy circle
+            userMarker = L.marker([lat, lon]).addTo(map);
+            userMarker.bindPopup('Your Location').openPopup();
+            userCircle = L.circle([lat, lon], { radius: accuracy }).addTo(map);
+        }
+
+        function error(err) {
+            if (err.code === 1) {
+                alert("Please allow location access.");
+            } else {
+                alert("Failed to retrieve location.");
+            }
+        }
+
+        // Function to show route from user's location to clicked gym
+        function showRoute(destLat, destLng, locationName) {
+            // Remove existing route if any
+            if (routeLine) {
+                map.removeLayer(routeLine);
+            }
+
+            // Create a new route using Leaflet Routing Machine
+            routeLine = L.Routing.control({
+                waypoints: [
+                    L.latLng(userMarker.getLatLng().lat, userMarker.getLatLng().lng),
+                    L.latLng(destLat, destLng)
+                ],
+                createMarker: function() { return null; },
+                routeWhileDragging: true,
+                lineOptions: {
+                    styles: [{ color: 'blue', weight: 4 }]
+                }
+            }).addTo(map);
+
+            // Ensure that the routing instructions have black text
+            routeLine.getPlan().on('routefound', function(e) {
+                var instructions = document.querySelector('.leaflet-routing-instructions');
+                if (instructions) {
+                    instructions.style.color = 'black'; // Set the text color to black
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

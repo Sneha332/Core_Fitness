@@ -1,0 +1,37 @@
+[
+    {
+"Latitude": 13.0021514, 
+"Longitude": 77.5530417,
+"Name": "Quadz Fitness",
+"Address": "Above Kadamba Sports, Bangalore 560010, 140, Dr Rajkumar Rd, 1st Block, Rajaji Nagar, Bengaluru, Karnataka "},
+{
+"Latitude": 12.9705764, 
+"Longitude": 77.6449017,
+"Name": "Cult Indiranagar",
+"Address": "1st floor, Above Ritu Kumar, Indiranagar Double Rd, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka"},
+{
+"Latitude": 12.9065920,
+"Longitude": 77.5925708,
+"Name": "Cult JP Nagar",
+"Address": "100 Feet Ring Road, Jeewan Griha Colony, JP Nagar 2nd Phase,Bangalore, Karnataka"
+},
+
+{
+"Latitude": 12.9993577, 
+"Longitude":77.5495649,
+"Name": "Snap Fitness",
+"Address": "Fitness Centre Snap Fitness, 46, Star Circle Underpass, West of Chord Road 2nd Stage, Mahalakshmipuram, Bengaluru, Bangalore North, Karnataka"
+},
+{
+"Latitude": 12.9070546, 
+"Longitude": 77.5985562,
+"Name": "Kaizen Fitness",
+"Address": "Sports Centre Kaizen Fitness, 72/A, 3rd Floor, Outer Ring Road, Dollars Colony, JP Nagar, Bengaluru, Bangalore South, Karnataka"
+},
+{
+"Latitude": 12.9002999, 
+"Longitude": 77.5860464,
+"Name": "WE Fitness, Health and Wellness Center",
+"Address": "23rd Main Rd, Nagaraja Garden, J P Nagar Phase 5, JP Nagar, Bangalore South, Karnataka"
+}
+]

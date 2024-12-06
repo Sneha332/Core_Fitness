@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Vishal Singh",
+        "image": "images/trainer-1.jpg",
+        "bio": "Vishal Singh is a highly skilled and certified personal trainer with over a decade of experience in fitness training, strength conditioning, and personalized nutrition planning. He has dedicated his career to helping individuals achieve their health and wellness goals through customized workout programs, dietary guidance, and ongoing motivation. Vishal’s expertise spans a variety of fitness domains, including weight loss, muscle building, functional training, and overall lifestyle improvement, making him a trusted professional in the industry."
+    },
+    {
+        "id": "2",
+        "name": "Ayushi Soni",
+        "image": "images/trainer-2.jpg",
+        "bio": "Ayushi Soni is a dedicated fitness professional with 7 years of experience specializing in strength training. She has worked with clients from diverse backgrounds, helping them achieve a wide range of fitness goals, including building muscle, improving endurance, enhancing athletic performance, and increasing overall physical strength. Ayushi is known for designing personalized workout plans tailored to each client's needs and abilities, ensuring steady progress and sustainable results. Her holistic approach to fitness also incorporates guidance on proper nutrition, recovery strategies, and mindset coaching, making her a trusted partner in her clients’ health and wellness journeys."
+    },
+    {
+        "id": "3",
+        "name": "Himanshu Rawat",
+        "image": "images/trainer-3.jpg",
+        "bio": "Himanshu Rawat is a renowned fitness coach celebrated for his expertise in cardio training and motivational coaching. With a deep understanding of cardiovascular fitness, he has helped clients improve their endurance, enhance heart health, and achieve weight management goals through customized and dynamic workout routines. Himanshu's motivational coaching style inspires individuals to push beyond their limits, overcome challenges, and maintain a positive mindset throughout their fitness journeys. His ability to combine technical knowledge with encouragement and support has made him a go-to professional for those seeking to transform their fitness levels and adopt a healthier, more active lifestyle."
+    },
+    {
+        "id": "4",
+        "name": "Prerna Dave",
+        "image": "images/trainer-4.jpg",
+        "bio": "Prerna Dave is a highly skilled yoga instructor and fitness coach with a deep commitment to promoting holistic well-being. She blends traditional yoga practices with modern fitness techniques to help clients achieve a balanced mind, body, and spirit. Prerna specializes in guiding individuals through personalized yoga sessions that focus on flexibility, strength, stress relief, and mindfulness. As a fitness coach, she complements her yoga expertise with tailored workout plans and wellness strategies, empowering clients to embrace a healthier and more fulfilling lifestyle. Her nurturing approach and dedication to holistic health have made her a trusted mentor for those seeking harmony in their physical and mental well-being."
+    }
+]

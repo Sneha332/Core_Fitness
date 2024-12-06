@@ -1,0 +1,369 @@
+/* Import Nunito font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* Header */
+.header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.header .logo {
+    color: greenyellow;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: white;
+}
+
+/* Map Section */
+.mid-image {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5%;
+}
+
+.head-about {
+    color: greenyellow;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.para-about {
+    margin-top: 8%;
+    color: white;
+    font-size: 20px;
+}
+
+.mid-image-about {
+    width: 100%;
+    height: 500px; /* Adjust height for better visibility */
+    display: flex;
+    border: 2px solid white;
+    margin-top: 20px;
+}
+
+/* Second Mid Section (Branch Grid) */
+.second-mid-head {
+    text-align: center;
+    color: greenyellow;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.second-mid-images {
+    display: grid;
+    width: 80%;
+    margin: 10px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.second-mid-img-section {
+    width: 100%;
+    text-align: center;
+}
+
+.second-mid-img-section img {
+    width: 80%;
+    border-radius: 10px;
+    border: 3px solid greenyellow;
+}
+
+h3 {
+    color: greenyellow;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+/* Import Nunito font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* Header */
+.header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.header .logo {
+    color: greenyellow;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: white;
+}
+
+/* Map Section */
+.mid-image {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5%;
+}
+
+.head-about {
+    color: greenyellow;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.para-about {
+    margin-top: 8%;
+    color: white;
+    font-size: 20px;
+}
+
+.mid-image-about {
+    width: 100%;
+    height: 500px; /* Adjust height for better visibility */
+    display: flex;
+    border: 2px solid white;
+    margin-top: 20px;
+}
+
+/* Second Mid Section (Branch Grid) */
+.second-mid-head {
+    text-align: center;
+    color: greenyellow;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.second-mid-images {
+    display: grid;
+    width: 80%;
+    margin: 10px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.second-mid-img-section {
+    width: 100%;
+    text-align: center;
+}
+
+.second-mid-img-section img {
+    width: 80%;
+    border-radius: 10px;
+    border: 3px solid greenyellow;
+}
+
+h3 {
+    color: greenyellow;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    background-color: #07080B;
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer .box {
+    width: 25%;
+    margin: 20px 0;
+}
+
+.footer .box h3 {
+    color: greenyellow;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer .box a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 8px 0;
+    text-decoration: none;
+}
+
+.footer .box p {
+    color: white;
+    font-size: 18px;
+}
+
+.footer .box .email {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+.footer .box .btn {
+    padding: 10px 15px;
+    background-color: greenyellow;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.footer .box .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer .share a {
+    font-size: 20px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer .share a:hover {
+    color: greenyellow;
+}
+.para-about {
+    background-color: #000000; /* Light background for contrast */
+    color: #f9f7f7; /* Dark text color */
+    padding: 20px; /* Space inside the paragraph */
+    border-left: 5px solid #4CAF50; /* Green left border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger text */
+    line-height: 1.6; /* Increased line height for readability */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px auto; /* Center the paragraph */
+    max-width: 800px; /* Limit the width */
+}
+
+.para-about:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Map Container */
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .second-mid-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .second-mid-img-section img {
+        width: 90%;
+    }
+
+    .footer .box {
+        width: 45%;
+    }
+
+    .header .logo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .second-mid-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer .box {
+        width: 90%;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+}
+
+
+/* Map Container */
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .second-mid-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .second-mid-img-section img {
+        width: 90%;
+    }
+
+    .footer .box {
+        width: 45%;
+    }
+
+    .header .logo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .second-mid-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer .box {
+        width: 90%;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+}
